@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sqiniseko Zulu">
+    <meta name="description" content="Wool bikinis for ladies by Nelisiwe">
+
+    <title>Nelisiwe's Wool Bikinis</title>
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body id="body">
+    <nav>
+      <figure>
+        <figcaption>Nelisiwe</figcaption>
+      </figure>
+
+      <div class="wrapper">
+        <div id="ham">
+          <div class="div1"></div>
+          <div class="div2"></div>
+          <div class="div3"></div>
+        </div>
+          <div id="slider">
+            <div id="cross">
+              <div class="cross-flex">
+                <div class="cross-div1"></div>
+                <div class="cross-div2"></div>
+              </div>
+            </div>
+            <ul>
+              <li><a href="#pictures">Pictures</a></li>
+              <li><a href="#contacts">Contacts</a></li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+    <header>
+      <!-- <h1> Siwe's Wool <br> Bikinis</h1> -->
+      <h1>I can make anything with a <i> hook </i> and yarn</h1>
+      <!-- <p>My hands are my pride</p> -->
+      <p>What's your superpower?</p>
+      <div class="hr">
+        <hr>
+      </div>
+    </header>
+    <main>
+      <div id="pictures" class="main-wrapper">
+        <div class="column1">
+          <img src="images/pic1-2.jpg" alt="bikini 1" class="stagger" id="image1"  onclick="image('pic1-2.jpg')">
+          <img src="images/nondu.jpg" class="nondu stagger2" alt="bikini 2" id="image2" onclick="image('nondu.jpg')">
+        </div>
+
+        <div class="column2">
+          <img src="images/pic4.jpg" class="col2-1 stagger3" alt="bikini 3"  id="image3" onclick="image('pic4.jpg')">
+          <img src="images/pic3.jpg" class="col2-2 stagger4" alt="bikini 4" id="image4" onclick="image('pic3.jpg')">
+        </div>
+      </div>
+    </main>
+    <footer id="contacts">
+      <div class="footer-div1">
+        <a href="https://www.facebook.com/profile.php?id=100008803089082" target="_blank"><img src="images/facebook2.png" alt="facebook"></a>
+        <a href="tel:+27837720436"><img src="images/phone.webp" alt="phone"></a>
+
+      </div>
+      <div class="footer-div2">
+        <small>Designed By <a href="https://ashauranceheavens.github.io" target="_blank">Sqiniseko</a> </small>
+      </div>
+
+    </footer>
+    <!-- <script type="text/javascript" src="script/script.js" charset="utf-8"></script> -->
+
+    <script type="text/javascript" src="script/script.js"></script>
+
+
+
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/CSSRulePlugin.js">
+       </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.js">
+
+       </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/ScrollTrigger.min.js">
+       </script>
+
+       <!-- NOTE: DELETE SCRIPT BELOW -->
+
+        <script type="text/javascript" src="script/gsap-public/src/CSSRulePlugin.js">
+
+        </script>
+        <script type="text/javascript" src="script/gsap-public/umd/gsap.js">
+
+        </script>
+        <script type="text/javascript" src="script/gsap-public/umd/ScrollTrigger.js">
+
+        </script>
+
+        <!-- NOTE: DELETE SCRIPT ABOVEW -->
+       <script>
+          gsap.registerPlugin(ScrollTrigger);
+
+          var tl = gsap.timeline();
+
+          tl.from(".stagger", {
+            y:50,
+            // stagger: .3,
+            opacity:0,
+            duration:2,
+            ease:Power4.easeOut
+
+          })
+
+          tl.from(".nondu", {
+            y:50,
+            // stagger: .3,
+            opacity:0,
+            duration:2,
+            ease:Power4.easeOut
+
+          }, "-=1.5")
+
+          tl.from(".stagger3", {
+            y:50,
+            // stagger: .3,
+            opacity:0,
+            duration:2,
+            ease:Power4.easeOut
+
+          }, "-=1.5")
+          tl.from(".stagger4", {
+            y:50,
+            // stagger: .3,
+            opacity:0,
+            duration:2,
+            ease:Power4.easeOut
+
+          }, "-=1.5")
+
+
+
+
+
+
+       </script>
+  </body>
+</html>
