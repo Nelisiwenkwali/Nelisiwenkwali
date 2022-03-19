@@ -2,8 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: monospace;
-  /*   background: white; */ }
+  font-family: poppins, monospace;
+  /*   background: white; */
+  font-size: 18px; }
 
 html {
   scroll-behavior: smooth; }
@@ -25,9 +26,14 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 7px 5px;
+  padding: 17px 15px;
   overflow: hidden;
-  box-shadow: 1px 0px 8px black; }
+  box-shadow: 1px 0px 8px black;
+  background-color: #013454;
+  color: #d77947;
+  text-shadow: 2px 2px 8px black;
+  box-shadow: 0px 5px 8px black;
+  position: relative; }
   nav #ham {
     display: none; }
     @media only screen and (min-width: 568px) {
@@ -43,6 +49,8 @@ nav {
   nav .wrapper {
     overflow: hidden !important; }
     nav .wrapper #slider {
+      background: #013454;
+      color: #d77947;
       width: 100% !important;
       position: static;
       padding: unset;
@@ -76,7 +84,7 @@ nav {
       @media only screen and (min-width: 568px) {
         nav .wrapper #slider ul {
           margin-top: unset;
-          background: #fff; } }
+          background: #013454; } }
       nav .wrapper #slider ul li {
         list-style: none;
         text-align: center;
@@ -95,32 +103,38 @@ nav {
             padding: unset; } }
         nav .wrapper #slider ul li a {
           text-decoration: none;
-          color: white;
-          color: black; }
+          color: #d77947;
+          text-shadow: 2px 2px 8px black; }
           @media only screen and (min-width: 568px) {
             nav .wrapper #slider ul li a {
-              color: #000; } }
+              color: #d77947; } }
 
 header {
-  margin: 10px 0 10px 0;
-  padding: 5px 0 5px 0;
-  width: 100%; }
+  margin: 0px 0 0px 0;
+  padding: 45px 0 55px 0;
+  width: 100%;
+  background-color: #013454;
+  color: #d77947;
+  text-shadow: 2px 2px 8px black; }
   @media only screen and (min-width: 568px) {
     header {
-      margin: 20px 0 20px 0; } }
+      margin: 0px 0 0px 0; } }
   @media only screen and (min-width: 768px) {
     header {
-      margin: 40px 0 20px 0; } }
+      margin: 0px 0 0px 0;
+      padding: 10%; } }
   @media only screen and (min-width: 1200px) {
     header {
-      width: 70%;
-      margin: 40px 0 20px 15%; } }
+      width: 100%;
+      margin: 0px 0 20px 0;
+      padding-left: 10%; } }
   header h1 {
     text-align: center;
     padding: 20px 27px 0px;
     margin: 20px 10px 0px 10px;
     width: 85%;
-    margin-left: 8%; }
+    margin-left: 8%;
+    font-size: 25px; }
     @media only screen and (min-width: 568px) {
       header h1 {
         width: 75%;
@@ -134,7 +148,8 @@ header {
     margin: 10px; }
   header .hr {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: 20px; }
     header .hr hr {
       width: 60%;
       margin-top: 20px;
@@ -150,20 +165,32 @@ header {
           width: 57%; } }
 
 main {
-  margin: 20px  0 0 0;
-  padding: 20px;
+  margin: -10px  0 0 0;
+  padding: 50px;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  background-color: #d77947;
+  transform: skewY(-2deg); }
+  @media only screen and (min-width: 768px) {
+    main {
+      margin-top: -30px; } }
+  @media only screen and (min-width: 1200px) {
+    main {
+      margin-top: -60px;
+      padding-top: 60px;
+      padding-bottom: 100px; } }
   main .main-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px; }
+    grid-gap: 15px;
+    transform: skewY(2deg); }
     @media only screen and (min-width: 568px) {
       main .main-wrapper {
         grid-gap: 30px; } }
     @media only screen and (min-width: 1200px) {
       main .main-wrapper {
-        grid-gap: 44px; } }
+        grid-gap: 44px;
+        margin-top: -20px; } }
     main .main-wrapper .column1, main .main-wrapper .column2 {
       display: grid;
       grid-template-rows: repeat(2, 1fr); }
@@ -186,21 +213,39 @@ main {
 
 footer {
   color: #fff;
-  margin-top: 20px; }
+  background-color: #013454;
+  margin-top: -10px;
+  padding-top: 20px;
+  position: relative;
+  text-align: center; }
+  @media only screen and (min-width: 568px) {
+    footer {
+      margin-top: -30px;
+      padding-top: 20px; } }
+  footer p {
+    color: #d77947;
+    text-shadow: 0px 2px 8px black; }
   footer .footer-div1 {
-    background: black;
-    padding: 20px;
-    display: flex;
+    background: #013454;
+    padding: 0 20px 20px 0;
     justify-content: space-around; }
-    footer .footer-div1 a img {
-      background: #fff;
-      width: 15px; }
+    footer .footer-div1 a {
+      color: #d77947;
+      display: block;
+      text-decoration: none;
+      text-shadow: 0px 2px 8px black; }
+      footer .footer-div1 a img {
+        background: #fff;
+        width: 15px;
+        border-radius: 5px; }
   footer .footer-div2 {
     display: flex;
     color: black;
     justify-content: center;
-    padding: 10px; }
+    padding: 10px;
+    background-color: #d77947; }
     footer .footer-div2 a {
-      color: #484545; }
+      color: #013454;
+      text-shadow: 0px 0px 2px black; }
 
 /*# sourceMappingURL=master.css.map */

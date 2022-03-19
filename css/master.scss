@@ -1,3 +1,4 @@
+// @import url();
 @mixin mobile-landscape{
   @media only screen and (min-width: 568px){
     @content;
@@ -27,13 +28,20 @@
   }
 }
 
+$primary: rgb(1, 52, 84);
+$secondary:#d77947;
+$shadow:black;
+
+// $primary: #c15c26;
+// $secondary:rgb(1, 52, 84);
+
 *{
   padding:0;
   margin:0;
   box-sizing:border-box;
-  font-family: monospace;
+  font-family: poppins, monospace;
 /*   background: white; */
-  // font-size: 35em;
+  font-size: 18px;
 }
 html{
   scroll-behavior: smooth;
@@ -64,9 +72,15 @@ body{
 nav{
   display: flex;
   justify-content: space-between;
-  padding: 7px 5px;
+  padding: 17px 15px;
   overflow: hidden;
   box-shadow: 1px 0px 8px black;
+  background-color: $primary;
+  color: $secondary;
+  text-shadow: 2px 2px 8px $shadow;
+  box-shadow: 0px 5px 8px $shadow;
+  position: relative;
+
 
   #ham{
 
@@ -91,7 +105,8 @@ nav{
     overflow: hidden !important;
 
     #slider{
-      // background: black;
+      background: $primary;
+      color: $secondary;
       // position: fixed;
       // top: 0;
       // bottom:0;
@@ -150,7 +165,7 @@ nav{
 
         @include mobile-landscape{
           margin-top: unset;
-          background: #fff;
+          background: $primary;
         }
 
         li{
@@ -178,11 +193,11 @@ nav{
 
           a{
             text-decoration: none;
-            color: white;
-            color: black;
+            color: $secondary;
+            text-shadow: 2px 2px 8px $shadow;
 
             @include mobile-landscape{
-              color: #000;
+              color: $secondary;
             }
           }
         }
@@ -192,20 +207,25 @@ nav{
 }
 
 header{
-  margin: 10px 0 10px 0;
-  padding: 5px 0 5px 0;
+  margin: 0px 0 0px 0;
+  padding: 45px 0 55px 0;
   width: 100%;
+  background-color: $primary;
+  color: $secondary;
+  text-shadow: 2px 2px 8px $shadow;
 
   @include mobile-landscape{
-    margin: 20px 0 20px 0;
+    margin: 0px 0 0px 0;
   }
 
   @include tablet{
-    margin: 40px 0 20px 0;
+    margin: 0px 0 0px 0;
+    padding: 10%;
   }
   @include desktop-landscape{
-    width: 70%;
-    margin: 40px 0 20px 15%;
+    width: 100%;
+    margin: 0px 0 20px 0;
+    padding-left: 10%;
   }
 
   h1{
@@ -214,6 +234,7 @@ header{
     margin:20px 10px 0px 10px;
     width: 85%;
     margin-left: 8%;
+    font-size: 25px;
 
     @include mobile-landscape{
       width: 75%;
@@ -231,6 +252,7 @@ header{
   .hr{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
     hr{
       width: 60%;
       margin-top: 20px;
@@ -253,21 +275,38 @@ header{
 
 main{
 
-  margin: 20px  0 0 0;
-  padding: 20px;
+  margin: -10px  0 0 0;
+  padding: 50px;
   display: flex;
   justify-content: center;
+  background-color: $secondary;
+  transform:skewY(-2deg);
 
+  @include tablet{
+    margin-top: -30px;
+   }
+ 
+   @include desktop-landscape(){
+    margin-top: -60px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+   }
    .main-wrapper{
      display: grid;
      grid-template-columns: repeat(2, 1fr);
      grid-gap: 15px;
+     transform:skewY(2deg);
 
      @include mobile-landscape{
        grid-gap: 30px;
+      //  margin-top: -30px;
      }
+
+     
+
      @include desktop-landscape{
        grid-gap: 44px;
+       margin-top: -20px;
      }
      .column1, .column2{
        display: grid;
@@ -306,24 +345,50 @@ main{
        }
      }
    }
+
+   
 }
 
 footer{
   color: #fff;
-  margin-top: 20px;
+  background-color: $primary;
+  margin-top: -10px;
+  padding-top: 20px;
+  position: relative;
+  // transform:skewY(-2deg);
+  text-align: center;
+
+  @include mobile-landscape{
+    margin-top: -30px;
+    padding-top: 20px;
+   }
+
+   p{
+    //  display: none;
+    //  text-align: center;
+     color: $secondary;
+     text-shadow: 0px 2px 8px $shadow;
+   }
+
 
   .footer-div1{
-    background: black;
-      padding: 20px;
+    background: $primary;
+      padding:  0 20px 20px 0;
       // display: grid;
       // grid-template-columns: repeat(2, 1fr);
-      display: flex;
+      // display: flex;
       justify-content: space-around;
+      // transform:skewY(2deg);
 
       a{
+        color: $secondary;
+        display: block;
+        text-decoration: none;
+        text-shadow: 0px 2px 8px $shadow;
         img{
           background: #fff;
           width: 15px;
+          border-radius: 5px;
         }
       }
   }
@@ -332,9 +397,13 @@ footer{
     color: black;
     justify-content: center;
     padding: 10px;
+    background-color: $secondary;
+    // transform:skewY(2deg);
 
     a{
-      color:#484545;
+      // color:#484545;
+      color: $primary;
+      text-shadow: 0px 0px 2px $shadow;
     }
   }
 }
