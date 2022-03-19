@@ -1,4 +1,4 @@
-// @import url();
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
 @mixin mobile-landscape{
   @media only screen and (min-width: 568px){
     @content;
